@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* { margin: 0; padding: 0;}
+html, body { height: 100%;}
+
+:root {
+    --bacgkround-color: #373737;
+    --font-color: #F6E8EA;
+    --font-color-light: hsla(351, 42%, 94%, 0.75);
+    --primray-color: #00B8B8;
+}
+
+body {
+    background-color: var(--bacgkround-color);
+    font-family: 'Poppins', sans-serif;
+    padding: 0 15%;
+}
+
+a {
+    color: var(--font-color);
+}
+
+
+.glow {
+    background-image: radial-gradient(at top, rgba(246, 233, 235, 0.1), transparent);
+    /* width: 100%; */
+    height: 300%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: -1;
+}
+
+.card {
+    display: flex;
+    gap: 2rem;
+
+    padding: 3rem 0;
+}
+
+.blob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: fit-content;
+}
+
+.image {
+    background-image: url('./assets/img/photo.jpeg');
+    background-size: cover;
+    background-position: center center;
+
+    height: 200px;
+    width: 200px;
+
+    box-shadow: 0 10px 5px 5px rgba(0, 0, 0, 0.2);
+
+    animation: blob-animation 10s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: var(--primray-color);
+    opacity: 0.2;
+}
+
+.initials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(--font-color);
+}
+
+.socials {
+    display: flex;
+    gap: 0.5rem;
+
+    margin-top: 0.5rem;
+}
+
+.icon {
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    transition: 0.2s ease-in-out;
+}
+
+.icon:hover {
+    color: var(--primray-color);
+}
+
+section {
+    padding: 2rem 0;
+    color: var(--font-color);
+}
+
+section h1 {
+    font-size: 52px;
+}
+
+ul {
+    /* margin-left: 1rem; */
+    padding-left: 0.2rem;
+}
+
+.align-right {
+    text-align: end;
+}
+
+.date {
+    color: var(--font-color-light);
+    font-weight: 200;
+}
+
+.extention {
+    font-style: italic;
+    font-weight: 200;
+}
+
+.fancy-link {
+    background-image: linear-gradient(90deg, #00B8B8, #40F99B);
+    background-size: 0 5px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    transition: background-size 300ms ease;
+
+    text-decoration: none;
+}
+
+.fancy-link:hover {
+    background-size: 100% 5px;
+}
+
+@keyframes blob-animation {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
