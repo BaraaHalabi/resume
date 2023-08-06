@@ -28,7 +28,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    background-image: url(/assets/img/backdro.webp);
+    background-image: url('/assets/img/backdrop.webp');
     background-position: 0px;
     background-repeat: no-repeat;
     background-size: cover;
