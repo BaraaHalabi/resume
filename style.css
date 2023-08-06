@@ -241,7 +241,7 @@ ul {
 
 @media (max-width: 480px) {
     .icon {
-        font-size: 2rem;
+        display: none;
     }
 
     section h1 {
